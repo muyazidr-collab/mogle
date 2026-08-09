@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MOGLE">
+  <!--
+    PLACEHOLDER — pendekatan kasar dari logo MOGLE.
+    Ganti file ini dengan logo asli (tetap dengan nama logo.svg,
+    atau ganti path-nya di index.html) begitu file aslinya tersedia.
+  -->
+  <g fill="none" stroke="#062a5e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Badan mouse -->
+    <rect x="156" y="96" width="200" height="320" rx="100"/>
+    <!-- Roda gulir -->
+    <path d="M256 104 V138" stroke-width="14"/>
+    <!-- Ikon kecil di bagian atas -->
+    <path d="M234 190 a22 22 0 0 1 44 0"/>
+    <path d="M226 190 H286"/>
+    <path d="M240 190 a16 13 0 0 0 32 0"/>
+    <!-- Huruf "me" -->
+    <g transform="translate(-12 0)">
+      <path d="M186 334 V284 a22 22 0 0 1 44 0 V334"/>
+      <path d="M230 284 a22 22 0 0 1 44 0 V334"/>
+      <path d="M290 306 H346 A28 28 0 1 0 338 326"/>
+    </g>
+  </g>
+  <circle cx="248" cy="178" r="4" fill="#062a5e"/>
+</svg>

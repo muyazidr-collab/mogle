@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOGLE — Mouse Gesture Wireless</title>
+  <meta name="description" content="MOGLE (Mouse Gesture Wireless) adalah perangkat input komputer nirkabel berbasis pengenalan gestur tangan. Kendalikan kursor cukup dengan menggerakkan telapak tangan.">
+  <meta name="theme-color" content="#062a5e">
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Menandai bahwa JS aktif. Animasi "muncul saat digulir" hanya menyembunyikan
+       elemen bila kelas ini ada, sehingga konten tetap terlihat jika JS gagal. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#beranda">Lompat ke konten utama</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#beranda" aria-label="MOGLE — beranda">
+        <img class="brand__mark" src="assets/img/logo.svg" alt="">
+        <span class="brand__name">MOGLE</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#tentang">Tentang</a></li>
+          <li><a class="nav__link" href="#fitur">Fitur</a></li>
+          <li><a class="nav__link" href="#cara-kerja">Cara Kerja</a></li>
+          <li><a class="nav__link" href="#spesifikasi">Spesifikasi</a></li>
+          <li><a class="nav__link" href="#galeri">Galeri</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary btn--sm header__cta" href="#kontak">
+        Hubungi Kami
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="beranda">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+      </div>
+
+      <p class="hero__ghost" aria-hidden="true">MOGLE</p>
+
+      <div class="container hero__inner">
+        <div class="hero__copy" data-reveal>
+          <span class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            Mouse Gesture Wireless
+          </span>
+
+          <h1 class="hero__title">
+            Kendalikan kursor,<br>
+            cukup dengan <em>gerakan tangan</em>
+          </h1>
+
+          <p class="hero__lead">
+            MOGLE adalah perangkat input komputer nirkabel berbasis pengenalan gestur.
+            Tanpa mencengkeram, tanpa kabel — cukup geser telapak tangan Anda
+            sesuai posisi yang diinginkan.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#fitur">
+              Lihat Fitur
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#cara-kerja">Cara Kerja</a>
+          </div>
+
+          <dl class="hero__stats">
+            <div class="stat">
+              <dt>Sensor Gerak</dt>
+              <dd>6-Axis</dd>
+            </div>
+            <div class="stat">
+              <dt>Koneksi</dt>
+              <dd>Nirkabel</dd>
+            </div>
+            <div class="stat">
+              <dt>Daya</dt>
+              <dd>Isi Ulang</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <!-- Ganti <figure> ini dengan <img src="assets/img/produk-hero.png" alt="Perangkat MOGLE"> -->
+          <figure class="media media--hero" data-placeholder>
+            <img class="media__watermark" src="assets/img/logo.svg" alt="">
+            <figcaption>Foto produk MOGLE</figcaption>
+          </figure>
+
+          <div class="float-card float-card--a" aria-hidden="true">
+            <span class="float-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3v4M5.6 5.6l2.9 2.9M3 12h4M5.6 18.4l2.9-2.9M12 21v-4M18.4 18.4l-2.9-2.9M21 12h-4M18.4 5.6l-2.9 2.9"/></svg>
+            </span>
+            <div>
+              <strong>Gestur Terbaca</strong>
+              <small>Akselerometer &amp; giroskop</small>
+            </div>
+          </div>
+
+          <div class="float-card float-card--b" aria-hidden="true">
+            <span class="float-card__icon float-card__icon--alt">
+              <svg viewBox="0 0 24 24"><path d="M12 19a7 7 0 0 0 7-7V8a7 7 0 1 0-14 0v4a7 7 0 0 0 7 7ZM12 6v3"/></svg>
+            </span>
+            <div>
+              <strong>Tanpa Genggam</strong>
+              <small>Bebas nyeri pergelangan</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <ul class="marquee__group">
+          <li>Kontrol Gestur</li>
+          <li>Nirkabel</li>
+          <li>ESP32</li>
+          <li>MPU6500</li>
+          <li>Sentuh Kapasitif</li>
+          <li>Ergonomis</li>
+          <li>Respons Real-Time</li>
+          <li>Baterai Isi Ulang</li>
+          <li>Bebas Kabel</li>
+        </ul>
+        <ul class="marquee__group">
+          <li>Kontrol Gestur</li>
+          <li>Nirkabel</li>
+          <li>ESP32</li>
+          <li>MPU6500</li>
+          <li>Sentuh Kapasitif</li>
+          <li>Ergonomis</li>
+          <li>Respons Real-Time</li>
+          <li>Baterai Isi Ulang</li>
+          <li>Bebas Kabel</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= TENTANG ================= -->
+    <section class="section" id="tentang">
+      <div class="container about">
+        <div class="about__media" data-reveal>
+          <figure class="media media--tall" data-placeholder>
+            <img class="media__watermark" src="assets/img/logo.svg" alt="">
+            <figcaption>Foto penggunaan MOGLE</figcaption>
+          </figure>
+          <div class="about__badge">
+            <strong>100%</strong>
+            <span>Bebas genggaman</span>
+          </div>
+        </div>
+
+        <div class="about__copy" data-reveal>
+          <span class="section__label">Tentang MOGLE</span>
+          <h2 class="section__title">Pencinta fleksibilitas?</h2>
+
+          <p>
+            Seiring meningkatnya intensitas penggunaan komputer, kebutuhan akan perangkat
+            input yang efisien semakin tinggi. Mouse menjadi perangkat input utama yang
+            paling banyak digunakan karena menawarkan presisi dan efisiensi navigasi
+            yang lebih baik dibandingkan touchpad.
+          </p>
+          <p>
+            Namun penggunaan mouse konvensional secara intensif dan repetitif dalam jangka
+            panjang membawa dampak negatif terhadap kesehatan pengguna, khususnya pada
+            aspek ergonomi.
+          </p>
+          <p>
+            Melihat urgensi permasalahan tersebut, lahirlah inovasi perangkat input komputer
+            nirkabel berbasis pengenalan gestur tangan yang diberi nama
+            <strong>MOGLE — Mouse Gesture Wireless</strong>.
+          </p>
+
+          <ul class="checklist">
+            <li>Mengurangi tekanan pada pergelangan tangan</li>
+            <li>Tidak perlu permukaan meja atau mousepad</li>
+            <li>Bergerak bebas tanpa terikat kabel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FITUR ================= -->
+    <section class="section section--soft" id="fitur">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__label">Fitur</span>
+          <h2 class="section__title">Apa yang membuatnya presisi</h2>
+          <p class="section__lead">
+            Yang membedakan MOGLE dari mouse konvensional adalah pengalaman mengatur
+            posisi kursor lewat gerakan tangan — tanpa perlu mencengkeram benda apa pun.
+          </p>
+        </header>
+
+        <div class="bento">
+          <article class="card card--wide card--dark" data-reveal>
+            <span class="card__num">01</span>
+            <h3>Pelacakan gestur 6 sumbu</h3>
+            <p>
+              Sensor akselerometer dan giroskop membaca kemiringan serta percepatan
+              telapak tangan, lalu menerjemahkannya menjadi pergerakan kursor yang halus.
+            </p>
+            <span class="card__tag">MPU6500</span>
+          </article>
+
+          <article class="card" data-reveal>
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11V7a3 3 0 0 1 6 0v4M7 11h10l1 9H6l1-9Z"/></svg>
+            </span>
+            <h3>Sentuh untuk klik</h3>
+            <p>Modul sentuh kapasitif menggantikan tombol mekanis — tanpa bagian bergerak yang mudah aus.</p>
+            <span class="card__tag">TTP223</span>
+          </article>
+
+          <article class="card" data-reveal>
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8 16a5.5 5.5 0 0 1 8 0M12 19.5h.01"/></svg>
+            </span>
+            <h3>Sepenuhnya nirkabel</h3>
+            <p>Konektivitas dari ESP32 membuat MOGLE bekerja tanpa kabel maupun dongle tambahan.</p>
+            <span class="card__tag">ESP32</span>
+          </article>
+
+          <article class="card card--vertical card--wide" data-reveal>
+            <span class="card__vtext">ERGONOMIS</span>
+            <div>
+              <h3>Dirancang untuk tangan</h3>
+              <p>Beban terdistribusi di telapak tangan, bukan bertumpu pada pergelangan.</p>
+            </div>
+          </article>
+
+          <article class="card card--full" data-reveal>
+            <span class="card__icon">
+              <svg viewBox="0 0 24 24"><path d="M4 8h13v8H4zM17 11h3v2h-3z"/></svg>
+            </span>
+            <h3>Baterai isi ulang</h3>
+            <p>
+              Baterai 18650 dengan modul pengisian Type-C dan boost converter menjaga
+              tegangan tetap stabil selama pemakaian panjang.
+            </p>
+            <span class="card__tag">TP4056 + MT3608</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CARA KERJA ================= -->
+    <section class="section" id="cara-kerja">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <span class="section__label">Cara Kerja</span>
+          <h2 class="section__title">Empat langkah, tanpa belajar ulang</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3>Pasang di tangan</h3>
+            <p>Kenakan MOGLE pada telapak tangan. Tidak ada yang perlu digenggam.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3>Gerakkan telapak</h3>
+            <p>Miringkan atau geser tangan — sensor menerjemahkannya jadi arah kursor.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3>Sentuh untuk klik</h3>
+            <p>Sentuhan ringan pada area kapasitif memicu klik kiri maupun kanan.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3>Bekerja nirkabel</h3>
+            <p>Perangkat terhubung otomatis ke komputer begitu dinyalakan.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= SPESIFIKASI ================= -->
+    <section class="section section--soft" id="spesifikasi">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__label">Spesifikasi</span>
+          <h2 class="section__title">Komponen di balik MOGLE</h2>
+          <p class="section__lead">
+            Setiap modul dipilih untuk satu tujuan: membaca gerakan tangan seakurat
+            mungkin sambil tetap ringan dan hemat daya.
+          </p>
+        </header>
+
+        <div class="specs" data-reveal>
+          <div class="spec">
+            <span class="spec__code">MPU6500</span>
+            <h3>Accelerometer &amp; Gyroscope</h3>
+            <p>Sensor 6 sumbu untuk membaca orientasi dan percepatan tangan.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__code">TTP223</span>
+            <h3>Capacitive Touch Module</h3>
+            <p>Deteksi sentuhan tanpa tombol fisik, responsif dan tahan lama.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__code">ESP32</span>
+            <h3>Mikrokontroler</h3>
+            <p>Otak perangkat sekaligus penyedia konektivitas nirkabel.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__code">TP4056</span>
+            <h3>Charging Module Type-C</h3>
+            <p>Pengisian daya baterai 18650 melalui port USB Type-C.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__code">MT3608</span>
+            <h3>Step-Up Boost Converter</h3>
+            <p>Menaikkan dan menstabilkan tegangan DC hingga 2A.</p>
+          </div>
+          <div class="spec spec--accent">
+            <span class="spec__code">18650</span>
+            <h3>Baterai Li-Ion</h3>
+            <p>Sumber daya isi ulang untuk pemakaian harian tanpa kabel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERI ================= -->
+    <section class="section" id="galeri">
+      <div class="container">
+        <header class="section__head section__head--center" data-reveal>
+          <span class="section__label">Galeri</span>
+          <h2 class="section__title">Lihat lebih dekat</h2>
+        </header>
+
+        <!-- Ganti setiap <figure> dengan <img src="assets/img/nama-file.jpg" alt="..."> -->
+        <div class="gallery" data-reveal>
+          <figure class="media media--gal media--gal-a" data-placeholder>
+            <img class="media__watermark" src="assets/img/logo.svg" alt="">
+            <figcaption>Tampak depan</figcaption>
+          </figure>
+          <figure class="media media--gal media--gal-b" data-placeholder>
+            <img class="media__watermark" src="assets/img/logo.svg" alt="">
+            <figcaption>Tampak samping</figcaption>
+          </figure>
+          <figure class="media media--gal media--gal-b" data-placeholder>
+            <img class="media__watermark" src="assets/img/logo.svg" alt="">
+            <figcaption>Detail sensor</figcaption>
+          </figure>
+          <figure class="media media--gal media--gal-a" data-placeholder>
+            <img class="media__watermark" src="assets/img/logo.svg" alt="">
+            <figcaption>Saat digunakan</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAK / CTA ================= -->
+    <section class="section" id="kontak">
+      <div class="container">
+        <div class="cta" data-reveal>
+          <p class="cta__ghost" aria-hidden="true">MOGLE</p>
+          <div class="cta__inner">
+            <span class="section__label section__label--light">Tertarik?</span>
+            <h2 class="cta__title">Rasakan cara baru menggerakkan kursor</h2>
+            <p class="cta__lead">
+              MOGLE masih terus dikembangkan. Sapa kami lewat Instagram untuk
+              informasi produk, kolaborasi, maupun uji coba perangkat.
+            </p>
+            <div class="cta__actions">
+              <a class="btn btn--light" href="https://www.instagram.com/moglein.aja"
+                 target="_blank" rel="noopener">
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M17.4 6.6h.01"/>
+                </svg>
+                @moglein.aja
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#beranda" aria-label="MOGLE — beranda">
+          <img class="brand__mark" src="assets/img/logo.svg" alt="">
+          <span class="brand__name">MOGLE</span>
+        </a>
+        <p>Mouse Gesture Wireless — perangkat input nirkabel berbasis pengenalan gestur tangan.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigasi footer">
+        <h3>Jelajahi</h3>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#cara-kerja">Cara Kerja</a></li>
+          <li><a href="#spesifikasi">Spesifikasi</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <h3>Kontak</h3>
+        <ul>
+          <li>
+            <a class="footer__ig" href="https://www.instagram.com/moglein.aja"
+               target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M17.4 6.6h.01"/>
+              </svg>
+              @moglein.aja
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <small>&copy; <span id="year">2026</span> MOGLE. Seluruh hak cipta dilindungi.</small>
+      <small>Mouse Gesture Wireless</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
