@@ -36,6 +36,9 @@
   --gutter: 24px;
   --header-h: 76px;
 
+  /* Lama satu putaran penuh pita pil. Makin kecil, makin cepat. */
+  --marquee-speed: 30s;
+
   --ease: cubic-bezier(.22, 1, .36, 1);
 }
 
@@ -449,12 +452,21 @@ a { color: inherit; text-decoration: none; }
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
+/* Jalur berisi DUA grup pil yang isinya wajib persis sama: animasi menggeser
+   tepat 50% lebar jalur, sehingga grup kedua mengambil alih posisi grup pertama
+   tanpa sambungan terlihat. Bila menambah atau menghapus pil, ubah KEDUA <ul>.
+
+   Tidak ada jeda saat kursor lewat: pita ini dekoratif (aria-hidden) dan
+   membentang selebar layar, jadi pause-on-hover hanya membuatnya tampak macet. */
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: scroll-x 34s linear infinite;
+  /* translate3d + will-change menaruh animasi di compositor GPU, sehingga tetap
+     mulus saat halaman digulir dan tidak tersendat oleh kerja di main thread. */
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: scroll-x var(--marquee-speed) linear infinite;
 }
-.marquee:hover .marquee__track { animation-play-state: paused; }
 
 .marquee__group { display: flex; gap: 12px; padding-right: 12px; }
 .marquee__group li {
@@ -469,8 +481,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 @keyframes scroll-x {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
 
 /* ---------- 8. Section umum ---------- */
@@ -873,6 +885,11 @@ a { color: inherit; text-decoration: none; }
     transition-duration: .01ms !important;
   }
   .js [data-reveal] { opacity: 1; transform: none; }
+
+  /* Pita pil berhenti rapi di posisi awal — tanpa ini aturan .01ms di atas
+     menyentakkannya ke ujung animasi. Tetap bisa digeser manual. */
+  .marquee__track { animation: none !important; transform: none !important; }
+  .marquee { overflow-x: auto; }
 }
 
 /* ---------- 19. Cetak ---------- */

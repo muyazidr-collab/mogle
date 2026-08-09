@@ -71,6 +71,16 @@ Email dan domain `www.mogle.com` sudah dihapus karena belum ada yang resmi.
 Bila nanti tersedia, tambahkan sebagai `<li>` baru di daftar kontak footer dan
 sebagai tombol kedua (`btn btn--outline`) di `.cta__actions`.
 
+## Pita pil berjalan (marquee)
+
+Pita di bawah hero berisi **dua `<ul>` yang isinya harus persis sama**. Animasi
+menggeser jalur tepat 50% dari lebarnya, sehingga grup kedua mengambil alih
+posisi grup pertama tanpa sambungan terlihat. Kalau menambah atau menghapus
+pil, ubah **kedua** daftar itu — kalau hanya satu, loop-nya akan meloncat.
+
+Kecepatannya diatur lewat `--marquee-speed` di `:root` (bawaan `30s` untuk satu
+putaran penuh). Makin kecil nilainya, makin cepat.
+
 ## Menyesuaikan warna
 
 Semua warna terpusat di blok `:root` pada `css/style.css`. Warna utama
