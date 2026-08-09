@@ -88,3 +88,20 @@ memperbarui tombol, judul, kartu gelap, dan footer sekaligus.
 - **Font** Plus Jakarta Sans dimuat dari Google Fonts. Untuk membuat situs
   sepenuhnya offline, unduh fontnya ke `assets/` dan ganti `<link>` di `<head>`
   dengan aturan `@font-face`.
+- **Ikon** memakai [Phosphor Icons](https://phosphoricons.com) bobot *regular*,
+  ditanam langsung sebagai SVG inline — tidak ada permintaan jaringan maupun
+  paket yang perlu dipasang. Semuanya ber-`viewBox="0 0 256 256"` dan mewarisi
+  warna teks lewat `fill: currentColor`.
+
+  Menambah ikon baru: salin isi `<path>` dari situs Phosphor (pilih weight
+  *Regular*), lalu tempel dengan pola yang sama seperti ikon yang sudah ada.
+
+  Ikon yang dipakai: `arrow-right`, `hand-swipe-right`, `hand-palm`, `hand-tap`,
+  `wifi-high`, `battery-charging`, `check`, `instagram-logo`, `list`, `x`.
+
+## Kredit
+
+- [Phosphor Icons](https://github.com/phosphor-icons/core) — MIT License,
+  Copyright (c) 2023 Phosphor Icons
+- [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) —
+  SIL Open Font License 1.1
