@@ -81,6 +81,16 @@ pil, ubah **kedua** daftar itu — kalau hanya satu, loop-nya akan meloncat.
 Kecepatannya diatur lewat `--marquee-speed` di `:root` (bawaan `30s` untuk satu
 putaran penuh). Makin kecil nilainya, makin cepat.
 
+**Kalau pita tidak bergerak,** kemungkinan besar sistemnya meminta pengurangan
+gerak — bukan bug. Situs ini menghormatinya dan menampilkan pil sebagai deretan
+statis yang terpusat. Pengaturannya:
+
+- **Windows:** Settings → Accessibility → Visual effects → *Animation effects*
+- **macOS:** System Settings → Accessibility → Display → *Reduce motion*
+- **Android:** Settings → Accessibility → *Remove animations*
+
+Nyalakan animasinya kembali kalau ingin pita berjalan.
+
 ## Menyesuaikan warna
 
 Semua warna terpusat di blok `:root` pada `css/style.css`. Warna utama

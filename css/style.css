@@ -886,10 +886,31 @@ a { color: inherit; text-decoration: none; }
   }
   .js [data-reveal] { opacity: 1; transform: none; }
 
-  /* Pita pil berhenti rapi di posisi awal — tanpa ini aturan .01ms di atas
-     menyentakkannya ke ujung animasi. Tetap bisa digeser manual. */
-  .marquee__track { animation: none !important; transform: none !important; }
-  .marquee { overflow-x: auto; }
+  /* Pita pil tidak sekadar dibekukan — pita yang berhenti di tengah jalan
+     terlihat seperti rusak, dan di Windows scrollbar-nya permanen sehingga
+     makin kentara. Diubah jadi deretan pil statis yang terpusat: satu set saja
+     (set kedua semata-mata alat bantu loop), boleh turun ke baris berikutnya,
+     tanpa gradien tepi dan tanpa scrollbar. */
+  .marquee {
+    overflow: visible;
+    padding-inline: var(--gutter);
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee__track {
+    animation: none !important;
+    transform: none !important;
+    width: auto;
+    max-width: var(--container);
+    margin-inline: auto;
+  }
+  .marquee__group {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
+  .marquee__group + .marquee__group { display: none; }
 }
 
 /* ---------- 19. Cetak ---------- */
