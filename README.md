@@ -1,7 +1,7 @@
-# MOGLE — Website Perkenalan Produk
+# MOGLE, Website Perkenalan Produk
 
 Website statis satu halaman untuk MOGLE (Mouse Gesture Wireless).
-Tanpa dependensi, tanpa proses build — cukup HTML, CSS, dan JavaScript biasa.
+Tanpa dependensi dan tanpa proses build. Cukup HTML, CSS, dan JavaScript biasa.
 
 ## Struktur berkas
 
@@ -11,7 +11,7 @@ Mogle/
 ├── css/style.css       # seluruh styling (bernomor per bagian)
 ├── js/main.js          # menu mobile, scrollspy, animasi scroll
 ├── assets/img/
-│   └── logo.svg        # PLACEHOLDER — ganti dengan logo asli
+│   └── logo.svg        # PLACEHOLDER, ganti dengan logo asli
 └── README.md
 ```
 
@@ -31,7 +31,7 @@ Lalu buka <http://localhost:4321>.
 
 `assets/img/logo.svg` saat ini hanya pendekatan kasar dari logo MOGLE.
 Timpa berkas itu dengan logo asli (pertahankan nama `logo.svg`), atau simpan
-dengan nama lain lalu perbarui path-nya di `index.html` — logo dipakai di
+dengan nama lain lalu perbarui path-nya di `index.html`. Logo dipakai di
 header, footer, favicon, dan sebagai watermark pada kotak placeholder gambar.
 
 ### 2. Foto produk
@@ -76,13 +76,13 @@ sebagai tombol kedua (`btn btn--outline`) di `.cta__actions`.
 Pita di bawah hero berisi **dua `<ul>` yang isinya harus persis sama**. Animasi
 menggeser jalur tepat 50% dari lebarnya, sehingga grup kedua mengambil alih
 posisi grup pertama tanpa sambungan terlihat. Kalau menambah atau menghapus
-pil, ubah **kedua** daftar itu — kalau hanya satu, loop-nya akan meloncat.
+pil, ubah **kedua** daftar itu. Kalau hanya satu, loop-nya akan meloncat.
 
 Kecepatannya diatur lewat `--marquee-speed` di `:root` (bawaan `30s` untuk satu
 putaran penuh). Makin kecil nilainya, makin cepat.
 
 **Kalau pita tidak bergerak,** kemungkinan besar sistemnya meminta pengurangan
-gerak — bukan bug. Situs ini menghormatinya dan menampilkan pil sebagai deretan
+gerak, bukan bug. Situs ini menghormatinya dan menampilkan pil sebagai deretan
 statis yang terpusat. Pengaturannya:
 
 - **Windows:** Settings → Accessibility → Visual effects → *Animation effects*
@@ -109,7 +109,7 @@ memperbarui tombol, judul, kartu gelap, dan footer sekaligus.
   sepenuhnya offline, unduh fontnya ke `assets/` dan ganti `<link>` di `<head>`
   dengan aturan `@font-face`.
 - **Ikon** memakai [Phosphor Icons](https://phosphoricons.com) bobot *regular*,
-  ditanam langsung sebagai SVG inline — tidak ada permintaan jaringan maupun
+  ditanam langsung sebagai SVG inline, tidak ada permintaan jaringan maupun
   paket yang perlu dipasang. Semuanya ber-`viewBox="0 0 256 256"` dan mewarisi
   warna teks lewat `fill: currentColor`.
 
@@ -121,7 +121,7 @@ memperbarui tombol, judul, kartu gelap, dan footer sekaligus.
 
 ## Kredit
 
-- [Phosphor Icons](https://github.com/phosphor-icons/core) — MIT License,
+- [Phosphor Icons](https://github.com/phosphor-icons/core), MIT License,
   Copyright (c) 2023 Phosphor Icons
-- [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) —
+- [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans),
   SIL Open Font License 1.1

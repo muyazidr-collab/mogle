@@ -1,5 +1,5 @@
 /* =========================================================
-   MOGLE — script utama
+   MOGLE, script utama
    Tanpa dependensi. Semua fitur bersifat progressive enhancement:
    halaman tetap bisa dibaca meski JavaScript dimatikan.
    ========================================================= */
